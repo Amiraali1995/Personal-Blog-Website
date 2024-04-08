@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  header {
+    grid-area: header;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .main-content {
+    grid-area: main;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .blog-highlight {
+    width: 60%; 
+  }
+  
+  .highlight-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .highlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-grid {
+    width: 40%; 
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 20px;
+  }
+  
+  .blog-post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 15px;
+  }
+  
+  .blog-content h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-content .blog-excerpt {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .blog-content .read-more {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    grid-area: footer;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+ 
+  @media (max-width: 1024px) {
+    .main-content {
+      flex-direction: column;
+    }
+    
+    .blog-highlight, .blog-grid {
+      width: 100%;
+    }
+  }
+  
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Space from the blog post content */
+}
+
+.author-avatar {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    border-radius: 50%; /* Make the image round */
+    margin-right: 15px; /* Space between the image and the text */
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px; /* Space between the name and title */
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: #555; /* A slightly lighter color for the bio text */
+}
+
+  
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
